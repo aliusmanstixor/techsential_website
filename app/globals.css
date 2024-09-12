@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer utilities {
+  .animation {
+    @apply transition-all duration-100 ease-linear;
+  }
+  .animationText {
+    @apply transition-all duration-300 ease-linear;
+  }
+  .topNormal {
+    @apply translate-y-0 opacity-100;
+  }
+  .topAnimation {
+    @apply -translate-y-20 opacity-0;
+  }
+  .normal {
+    @apply translate-y-0 opacity-100;
+  }
+  .leftAnimation {
+    @apply translate-y-32 opacity-0;
+  }
+  .rightAnimation {
+    @apply translate-y-32 opacity-0;
+  }
+}
+
+@keyframes navbar {
+  0% {
+    transform: translateY(-100%); /* Slide in from 100% above */
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0); /* End at the original position */
+    opacity: 1;
+  }
+}
